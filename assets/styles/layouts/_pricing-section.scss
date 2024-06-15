@@ -1,0 +1,97 @@
+
+
+.pricing-section {
+  padding: 40px 0;
+  text-align: center;
+color: rgb(255, 198, 50);
+ max-width: 1200px;
+ margin: 20px auto;
+
+  h2 {
+    color: rgb(56,45,94) ;
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .pricing-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    .pricing-card {
+      background-color: rgb(56,45,94);
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      min-width: 300px;
+      margin: 20px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+      }
+
+      &.featured {
+        
+
+        .card-header {
+          
+        }
+
+        .btn {
+          
+        }
+      }
+
+      .card-header {
+       
+        
+        padding: 20px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+
+        h3 {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+
+        .price {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+
+      .card-body {
+        padding: 20px;
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            margin-bottom: 10px;
+            font-size: 16px;
+           
+          }
+        }
+      }
+
+      .card-footer {
+        padding: 20px;
+
+        .btn {
+          display: inline-block;
+          
+          text-decoration: none;
+          padding: 10px 20px;
+          border-radius: 4px;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            
+          }
+        }
+      }
+    }
+  }
+}

@@ -70,6 +70,7 @@ header .form {
   width: 100px;
   height: 100px;
   margin-bottom: 10px;
+  margin-left: 50px;
 }
 header .form2 {
   border-radius: 0% 100% 70% 30%/19% 50% 50% 81%;
@@ -77,6 +78,7 @@ header .form2 {
   width: 50px;
   height: 50px;
   float: right;
+  margin-right: 50px;
 }
 header nav {
   display: -webkit-box;
@@ -220,6 +222,13 @@ main .section1 {
   margin: 50px auto;
   background-color: rgb(56, 45, 94);
   color: rgb(255, 198, 50);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  main .section1 {
+    text-align: center;
+  }
 }
 main .descriptionServices1 {
   display: -webkit-box;
@@ -232,10 +241,26 @@ main .descriptionServices1 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  main .descriptionServices1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 main .descriptionServices1Text {
   width: 50%;
   padding: 50px;
+}
+@media (max-width: 768px) {
+  main .descriptionServices1Text {
+    width: 100%;
+    padding: 20px;
+  }
 }
 main .descriptionServices1Text h2 {
   font-size: calc(3.5vw + 25px);
@@ -255,6 +280,12 @@ main .slider {
   height: 100%;
   position: relative;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+  main .slider {
+    width: 100%;
+    height: 300px;
+  }
 }
 main .slide {
   position: absolute;
@@ -412,4 +443,140 @@ main .descriptionServices4Text p {
 }
 main .descriptionServices4Text p span {
   color: white;
+}
+
+.process-section {
+  padding: 40px 0;
+  text-align: center;
+  background-color: rgb(255, 198, 50);
+}
+.process-section h2 {
+  font-size: calc(1vw + 15px);
+  color: #2c3e50;
+}
+.process-section h2 span {
+  color: white;
+}
+.process-section .process-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 40px;
+}
+.process-section .process-cards .process-card {
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-radius: 8px 50px 8px 8px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 20px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.process-section .process-cards .process-card:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+.process-section .process-cards .process-card .card-icon {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.process-section .process-cards .process-card h3 {
+  font-size: calc(0.8vw + 15px);
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+.process-section .process-cards .process-card p {
+  font-size: calc(0.2vw + 15px);
+  color: #666;
+}
+@media (max-width: 768px) {
+  .process-section .process-cards .process-card {
+    min-width: 250px;
+    margin: 10px;
+  }
+}
+
+.pricing-section {
+  padding: 40px 0;
+  text-align: center;
+  color: rgb(255, 198, 50);
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.pricing-section h2 {
+  color: rgb(56, 45, 94);
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+.pricing-section .pricing-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.pricing-section .pricing-cards .pricing-card {
+  background-color: rgb(56, 45, 94);
+  border-radius: 8px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  margin: 20px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.pricing-section .pricing-cards .pricing-card:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+.pricing-section .pricing-cards .pricing-card .card-header {
+  padding: 20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.pricing-section .pricing-cards .pricing-card .card-header h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.pricing-section .pricing-cards .pricing-card .card-header .price {
+  font-size: 18px;
+  font-weight: bold;
+}
+.pricing-section .pricing-cards .pricing-card .card-body {
+  padding: 20px;
+}
+.pricing-section .pricing-cards .pricing-card .card-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pricing-section .pricing-cards .pricing-card .card-body ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.pricing-section .pricing-cards .pricing-card .card-footer {
+  padding: 20px;
+}
+.pricing-section .pricing-cards .pricing-card .card-footer .btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }/*# sourceMappingURL=index.css.map */
