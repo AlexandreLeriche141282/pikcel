@@ -1,0 +1,50 @@
+main {
+    .section3 {
+      display: flex;
+      text-align: right;
+      max-width: 1400px;
+      margin: 50px auto;
+      background-color: rgb(56, 45, 94);
+  
+      color: rgb(255, 198, 50);
+    }
+  
+    .descriptionServices3 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      img {
+        width: 40%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    .descriptionServices3Text {
+      width: 60%;
+      padding: 50px;
+  
+      h2 {
+        font-size: calc(3.5vw + 25px);
+      }
+  
+      h3 {
+        font-size: calc(1vw + 15px);
+      }
+  
+      p {
+        font-size: calc(0.6vw + 15px);
+        padding-top: 20px;
+  
+        span {
+          color: white;
+        }
+      }
+  
+    }
+  
+    
+  
+  
+  }

@@ -1,0 +1,46 @@
+main {
+    .section2 {
+      display: flex;
+      text-align: right;
+      max-width: 1400px;
+      margin: 50px auto;
+      background-color: rgb(255, 198, 50);
+  
+      color:rgb(56, 45, 94);
+    }
+  
+    .descriptionServices2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      img{
+        height: 100%;
+        width: 40%;
+        object-fit: cover;
+      }
+    }
+  
+    .descriptionServices2Text {
+      width: 60%;
+      padding: 50px;
+  
+      h2 {
+        font-size: calc(3vw + 25px);
+      }
+  
+      h3 {
+        font-size: calc(1vw + 15px);
+      }
+  
+      p {
+        font-size: calc(0.6vw + 15px);
+        padding-top: 20px;
+  
+        span {
+          color: white;
+        }
+      }
+  
+    }
+}
