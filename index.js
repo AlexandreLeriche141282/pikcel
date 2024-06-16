@@ -53,7 +53,7 @@ ScrollReveal().reveal('.section2', {
   origin: 'right',
   distance: '100px',
   duration: 1000,
-  delay: 400,
+  delay: 200,
   reset: false
 });
 
@@ -61,7 +61,7 @@ ScrollReveal().reveal('.section3', {
   origin: 'left',
   distance: '100px',
   duration: 1000,
-  delay: 600,
+  delay: 200,
   reset: false
 });
 
@@ -69,7 +69,7 @@ ScrollReveal().reveal('.section4', {
   origin: 'right',
   distance: '100px',
   duration: 1000,
-  delay: 800,
+  delay: 200,
   reset: false
 });
 

@@ -14,16 +14,26 @@ main {
       align-items: center;
       justify-content: space-between;
       width: 100%;
+      @media (max-width: 768px) {
+        flex-direction: column-reverse;
+      }
       img{
         height: 100%;
         width: 40%;
         object-fit: cover;
+        @media (max-width: 768px) {
+          width: 100%;
+        }
       }
     }
   
     .descriptionServices4Text {
       width: 60%;
       padding: 50px;
+      @media (max-width: 768px) {
+        width: 100%;
+        text-align: center;
+      }
   
       h2 {
         font-size: calc(3vw + 25px);

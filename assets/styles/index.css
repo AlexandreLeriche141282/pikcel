@@ -104,6 +104,8 @@ header nav ul {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
+  padding: 0;
+  list-style: none;
 }
 header nav ul li {
   margin: 0 20px;
@@ -123,7 +125,7 @@ header nav a {
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; /* Ajoute une transition fluide */
+  transition: all 0.3s ease-in-out;
 }
 header nav a:hover {
   background-color: white;
@@ -156,6 +158,8 @@ header .banner .cardContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -184,7 +188,7 @@ header .card .plus {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  bottom: -19px; /* Ajustez cette valeur selon vos préférences */
+  bottom: -19px;
   width: 35px;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
@@ -213,6 +217,48 @@ header .description {
   color: #666;
 }
 
+/* Media queries pour les petits écrans */
+@media (max-width: 768px) {
+  header .presentation h1 {
+    font-size: 6vw;
+  }
+  header .presentation p {
+    font-size: 4vw;
+  }
+  header nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 20px;
+  }
+  header nav ul li {
+    margin: 10px 0;
+  }
+  header nav img {
+    width: 30vw;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  header .banner .cardContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 main .section1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -329,15 +375,34 @@ main .descriptionServices2 {
           justify-content: space-between;
   width: 100%;
 }
+@media (max-width: 768px) {
+  main .descriptionServices2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
 main .descriptionServices2 img {
   height: 100%;
   width: 40%;
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 768px) {
+  main .descriptionServices2 img {
+    width: 100%;
+  }
+}
 main .descriptionServices2Text {
   width: 60%;
   padding: 50px;
+}
+@media (max-width: 768px) {
+  main .descriptionServices2Text {
+    width: 100%;
+    text-align: center;
+  }
 }
 main .descriptionServices2Text h2 {
   font-size: calc(3vw + 25px);
@@ -363,6 +428,11 @@ main .section3 {
   background-color: rgb(56, 45, 94);
   color: rgb(255, 198, 50);
 }
+@media (max-width: 768px) {
+  main .section3 {
+    text-align: center;
+  }
+}
 main .descriptionServices3 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -375,15 +445,34 @@ main .descriptionServices3 {
           justify-content: space-between;
   width: 100%;
 }
+@media (max-width: 768px) {
+  main .descriptionServices3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 main .descriptionServices3 img {
   width: 40%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 768px) {
+  main .descriptionServices3 img {
+    width: 100%;
+  }
+}
 main .descriptionServices3Text {
   width: 60%;
   padding: 50px;
+}
+@media (max-width: 768px) {
+  main .descriptionServices3Text {
+    width: 100%;
+    padding: 20px;
+  }
 }
 main .descriptionServices3Text h2 {
   font-size: calc(3.5vw + 25px);
@@ -421,15 +510,34 @@ main .descriptionServices4 {
           justify-content: space-between;
   width: 100%;
 }
+@media (max-width: 768px) {
+  main .descriptionServices4 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
 main .descriptionServices4 img {
   height: 100%;
   width: 40%;
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 768px) {
+  main .descriptionServices4 img {
+    width: 100%;
+  }
+}
 main .descriptionServices4Text {
   width: 60%;
   padding: 50px;
+}
+@media (max-width: 768px) {
+  main .descriptionServices4Text {
+    width: 100%;
+    text-align: center;
+  }
 }
 main .descriptionServices4Text h2 {
   font-size: calc(3vw + 25px);
@@ -448,11 +556,11 @@ main .descriptionServices4Text p span {
 .process-section {
   padding: 40px 0;
   text-align: center;
-  background-color: rgb(255, 198, 50);
+  background-color: rgb(56, 45, 94);
 }
 .process-section h2 {
   font-size: calc(1vw + 15px);
-  color: #2c3e50;
+  color: rgb(255, 198, 50);
 }
 .process-section h2 span {
   color: white;
@@ -509,7 +617,7 @@ main .descriptionServices4Text p span {
 .pricing-section {
   padding: 40px 0;
   text-align: center;
-  color: rgb(255, 198, 50);
+  color: rgb(56, 45, 94);
   max-width: 1200px;
   margin: 20px auto;
 }
@@ -529,7 +637,7 @@ main .descriptionServices4Text p span {
       flex-wrap: wrap;
 }
 .pricing-section .pricing-cards .pricing-card {
-  background-color: rgb(56, 45, 94);
+  background-color: rgb(255, 198, 50);
   border-radius: 8px;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -539,6 +647,7 @@ main .descriptionServices4Text p span {
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  border: 1px solid rgb(48, 48, 31);
 }
 .pricing-section .pricing-cards .pricing-card:hover {
   -webkit-transform: translateY(-10px);

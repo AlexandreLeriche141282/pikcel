@@ -7,6 +7,9 @@ main {
       background-color: rgb(56, 45, 94);
   
       color: rgb(255, 198, 50);
+      @media (max-width: 768px) {
+        text-align: center; // Centre le texte sur les petits écrans
+      }
     }
   
     .descriptionServices3 {
@@ -14,16 +17,26 @@ main {
       align-items: center;
       justify-content: space-between;
       width: 100%;
+      @media (max-width: 768px) {
+        flex-direction: column; // Empile les éléments verticalement sur les petits écrans
+      }
       img {
         width: 40%;
         height: 100%;
         object-fit: cover;
+        @media (max-width: 768px) {
+          width: 100%;
+        }
       }
     }
   
     .descriptionServices3Text {
       width: 60%;
       padding: 50px;
+      @media (max-width: 768px) {
+        width: 100%; // Occupe toute la largeur sur les petits écrans
+        padding: 20px; // Réduit le padding sur les petits écrans
+      }
   
       h2 {
         font-size: calc(3.5vw + 25px);
