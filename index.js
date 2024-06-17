@@ -73,6 +73,22 @@ ScrollReveal().reveal('.section4', {
   reset: false
 });
 
+const nav = document.querySelector("nav");
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY < lastScroll) {
+        nav.style.top ="20px";
+    } else {
+        nav.style.top = "-140px"
+    }
+    lastScroll = window.scrollY;
+
+});
+
+document.querySelector('.menu-burger').addEventListener('click', () => {
+  document.querySelector('nav ul').classList.toggle('active');
+});
 
 
 

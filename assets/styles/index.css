@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "manrope";
   src: url(../fonts/Manrope-VariableFont_wght.ttf);
@@ -33,12 +32,17 @@ header {
 }
 header .presentation {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 8vw auto 0;
 }
 header .presentation h1 {
   text-align: center;
-  font-size: 3vw;
+  font-size: calc(2.8vw + 15px);
   font-weight: 500;
+}
+@media (max-width: 768px) {
+  header .presentation h1 {
+    margin-top: 100px;
+  }
 }
 header .presentation h1 span {
   font-weight: 600;
@@ -72,6 +76,11 @@ header .form {
   margin-bottom: 10px;
   margin-left: 50px;
 }
+@media (max-width: 768px) {
+  header .form {
+    display: none;
+  }
+}
 header .form2 {
   border-radius: 0% 100% 70% 30%/19% 50% 50% 81%;
   background-color: rgb(255, 255, 255);
@@ -79,6 +88,11 @@ header .form2 {
   height: 50px;
   float: right;
   margin-right: 50px;
+}
+@media (max-width: 768px) {
+  header .form2 {
+    display: none;
+  }
 }
 header nav {
   display: -webkit-box;
@@ -98,8 +112,44 @@ header nav {
   font-family: manrope, serif;
   font-weight: 600;
   background-color: rgb(255, 255, 255);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  right: 0;
 }
-header nav ul {
+@media (max-width: 768px) {
+  header nav {
+    margin: 20px;
+  }
+}
+header nav img {
+  width: 12vw;
+  padding-left: 30px;
+}
+@media (max-width: 768px) {
+  header nav img {
+    width: 150px;
+  }
+}
+header .menu-burger {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+header .menu-burger span {
+  height: 4px;
+  width: 25px;
+  background-color: black;
+  margin: 4px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,34 +157,62 @@ header nav ul {
   padding: 0;
   list-style: none;
 }
-header nav ul li {
+header li {
   margin: 0 20px;
   cursor: pointer;
 }
-header nav ul li:hover {
+header li:hover {
   color: rgb(255, 198, 50);
 }
-header nav a {
+header .btn {
   margin: 0 auto;
+  cursor: pointer;
   border: 2px solid rgb(255, 198, 50);
   background-color: rgb(255, 198, 50);
   border-radius: 50px;
   padding: 20px;
   color: white;
-  text-decoration: none;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-header nav a:hover {
+@media (max-width: 768px) {
+  header .btn {
+    margin: 0 10px 0 0;
+  }
+}
+header .btn:hover {
   background-color: white;
   color: rgb(255, 198, 50);
   scale: 1.01;
 }
-header nav img {
-  width: 12vw;
-  padding-left: 30px;
+@media (max-width: 768px) {
+  header .menu-burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+  header ul.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header li {
+    margin: 10px 0;
+  }
 }
 header .banner {
   display: -webkit-box;
@@ -217,48 +295,6 @@ header .description {
   color: #666;
 }
 
-/* Media queries pour les petits écrans */
-@media (max-width: 768px) {
-  header .presentation h1 {
-    font-size: 6vw;
-  }
-  header .presentation p {
-    font-size: 4vw;
-  }
-  header nav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  header nav ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-bottom: 20px;
-  }
-  header nav ul li {
-    margin: 10px 0;
-  }
-  header nav img {
-    width: 30vw;
-    padding-left: 0;
-    margin-bottom: 20px;
-  }
-  header .banner .cardContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
 main .section1 {
   display: -webkit-box;
   display: -ms-flexbox;
