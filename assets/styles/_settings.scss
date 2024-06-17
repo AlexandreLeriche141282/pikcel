@@ -10,6 +10,7 @@ $font1:manrope, serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  
   }
   @mixin childCenter {
     display: flex;
@@ -19,12 +20,16 @@ $font1:manrope, serif;
   body{
     background-color: rgb(253,250,246);
     color: rgb(56,45,94);
+    
     li{
       list-style: none;  
     }
     a{
         text-decoration: none;
         color: rgb(56,45,94);
+    }
+    main{
+      overflow-x: hidden;
     }
     
   }

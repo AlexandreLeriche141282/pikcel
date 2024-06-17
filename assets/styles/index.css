@@ -20,6 +20,9 @@ body a {
   text-decoration: none;
   color: rgb(56, 45, 94);
 }
+body main {
+  overflow-x: hidden;
+}
 
 header {
   min-height: 100vh;
@@ -110,7 +113,7 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0vw auto 5vw;
+  margin: 0 auto;
   padding: 1vw 0;
   border: 3px solid rgba(229, 218, 218, 0.519);
   border-radius: 40px;
@@ -120,14 +123,15 @@ header nav {
   background-color: rgb(255, 255, 255);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  position: fixed;
   z-index: 2;
   left: 0;
   right: 0;
 }
 @media (max-width: 900px) {
   header nav {
-    margin: 0 auto;
-    width: 100%;
+    margin: 0 10px;
+    width: calc(100% - 20px);
   }
 }
 header nav img {
@@ -137,6 +141,7 @@ header nav img {
 @media (max-width: 900px) {
   header nav img {
     width: 150px;
+    padding-left: 10px;
   }
 }
 header .menu-burger {
@@ -302,7 +307,7 @@ header .description {
   color: #666;
 }
 
-main .section1 {
+.section1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,14 +318,15 @@ main .section1 {
   color: rgb(255, 198, 50);
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 @media (max-width: 768px) {
-  main .section1 {
+  .section1 {
     text-align: center;
   }
 }
-main .descriptionServices1 {
+
+.descriptionServices1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -333,50 +339,54 @@ main .descriptionServices1 {
   width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  overflow-x: hidden;
 }
 @media (max-width: 768px) {
-  main .descriptionServices1 {
+  .descriptionServices1 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
 }
-main .descriptionServices1Text {
+
+.descriptionServices1Text {
   width: 50%;
   padding: 50px;
 }
 @media (max-width: 768px) {
-  main .descriptionServices1Text {
+  .descriptionServices1Text {
     width: 100%;
     padding: 20px;
   }
 }
-main .descriptionServices1Text h2 {
+.descriptionServices1Text h2 {
   font-size: calc(3.5vw + 25px);
 }
-main .descriptionServices1Text h3 {
+.descriptionServices1Text h3 {
   font-size: calc(1.5vw + 15px);
 }
-main .descriptionServices1Text p {
+.descriptionServices1Text p {
   font-size: calc(0.8vw + 15px);
   padding-top: 20px;
 }
-main .descriptionServices1Text p span {
+.descriptionServices1Text p span {
   color: white;
 }
-main .slider {
+
+.slider {
   width: 50%;
   height: 100%;
   position: relative;
 }
 @media (max-width: 768px) {
-  main .slider {
+  .slider {
     width: 100%;
     height: 300px;
   }
 }
-main .slide {
+
+.slide {
   position: absolute;
   top: 0;
   left: 0;
@@ -386,17 +396,19 @@ main .slide {
   -webkit-transition: opacity 0.8s ease-in-out;
   transition: opacity 0.8s ease-in-out;
 }
-main .slide img {
+.slide img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  overflow: hidden;
 }
-main .slide.active {
+
+.slide.active {
   opacity: 1;
 }
 
-main .section2 {
+.section2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -404,10 +416,11 @@ main .section2 {
   max-width: 1400px;
   margin: 50px auto;
   background-color: rgb(255, 198, 50);
+  overflow-x: hidden;
   color: rgb(56, 45, 94);
-  overflow: hidden;
 }
-main .descriptionServices2 {
+
+.descriptionServices2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -418,51 +431,53 @@ main .descriptionServices2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  overflow-x: hidden;
 }
 @media (max-width: 768px) {
-  main .descriptionServices2 {
+  .descriptionServices2 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
 }
-main .descriptionServices2 img {
+.descriptionServices2 img {
   height: 100%;
   width: 40%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media (max-width: 768px) {
-  main .descriptionServices2 img {
+  .descriptionServices2 img {
     width: 100%;
   }
 }
-main .descriptionServices2Text {
+
+.descriptionServices2Text {
   width: 60%;
   padding: 50px;
 }
 @media (max-width: 768px) {
-  main .descriptionServices2Text {
+  .descriptionServices2Text {
     width: 100%;
     text-align: center;
   }
 }
-main .descriptionServices2Text h2 {
+.descriptionServices2Text h2 {
   font-size: calc(3vw + 25px);
 }
-main .descriptionServices2Text h3 {
+.descriptionServices2Text h3 {
   font-size: calc(1vw + 15px);
 }
-main .descriptionServices2Text p {
+.descriptionServices2Text p {
   font-size: calc(0.6vw + 15px);
   padding-top: 20px;
 }
-main .descriptionServices2Text p span {
+.descriptionServices2Text p span {
   color: white;
 }
 
-main .section3 {
+.section3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -470,15 +485,16 @@ main .section3 {
   max-width: 1400px;
   margin: 50px auto;
   background-color: rgb(56, 45, 94);
-  overflow: hidden;
+  overflow-x: hidden;
   color: rgb(255, 198, 50);
 }
 @media (max-width: 768px) {
-  main .section3 {
+  .section3 {
     text-align: center;
   }
 }
-main .descriptionServices3 {
+
+.descriptionServices3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -489,51 +505,53 @@ main .descriptionServices3 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  overflow-x: hidden;
 }
 @media (max-width: 768px) {
-  main .descriptionServices3 {
+  .descriptionServices3 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
 }
-main .descriptionServices3 img {
+.descriptionServices3 img {
   width: 40%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media (max-width: 768px) {
-  main .descriptionServices3 img {
+  .descriptionServices3 img {
     width: 100%;
   }
 }
-main .descriptionServices3Text {
+
+.descriptionServices3Text {
   width: 60%;
   padding: 50px;
 }
 @media (max-width: 768px) {
-  main .descriptionServices3Text {
+  .descriptionServices3Text {
     width: 100%;
     padding: 20px;
   }
 }
-main .descriptionServices3Text h2 {
+.descriptionServices3Text h2 {
   font-size: calc(3.5vw + 25px);
 }
-main .descriptionServices3Text h3 {
+.descriptionServices3Text h3 {
   font-size: calc(1vw + 15px);
 }
-main .descriptionServices3Text p {
+.descriptionServices3Text p {
   font-size: calc(0.6vw + 15px);
   padding-top: 20px;
 }
-main .descriptionServices3Text p span {
+.descriptionServices3Text p span {
   color: white;
 }
 
-main .section4 {
+.section4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -541,10 +559,11 @@ main .section4 {
   max-width: 1400px;
   margin: 50px auto;
   background-color: rgb(255, 198, 50);
-  overflow: hidden;
+  overflow-x: hidden;
   color: rgb(56, 45, 94);
 }
-main .descriptionServices4 {
+
+.descriptionServices4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -555,47 +574,49 @@ main .descriptionServices4 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  overflow-x: hidden;
 }
 @media (max-width: 768px) {
-  main .descriptionServices4 {
+  .descriptionServices4 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
 }
-main .descriptionServices4 img {
+.descriptionServices4 img {
   height: 100%;
   width: 40%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media (max-width: 768px) {
-  main .descriptionServices4 img {
+  .descriptionServices4 img {
     width: 100%;
   }
 }
-main .descriptionServices4Text {
+
+.descriptionServices4Text {
   width: 60%;
   padding: 50px;
 }
 @media (max-width: 768px) {
-  main .descriptionServices4Text {
+  .descriptionServices4Text {
     width: 100%;
     text-align: center;
   }
 }
-main .descriptionServices4Text h2 {
+.descriptionServices4Text h2 {
   font-size: calc(3vw + 25px);
 }
-main .descriptionServices4Text h3 {
+.descriptionServices4Text h3 {
   font-size: calc(1vw + 15px);
 }
-main .descriptionServices4Text p {
+.descriptionServices4Text p {
   font-size: calc(0.6vw + 15px);
   padding-top: 20px;
 }
-main .descriptionServices4Text p span {
+.descriptionServices4Text p span {
   color: white;
 }
 

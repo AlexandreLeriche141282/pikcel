@@ -1,20 +1,20 @@
-main {
+
     .section4 {
       display: flex;
       text-align: right;
       max-width: 1400px;
       margin: 50px auto;
       background-color: rgb(255, 198, 50);
-  
-      overflow: hidden;
+      overflow-x: hidden;
       color:rgb(56, 45, 94);
-    }
-  
-    .descriptionServices4 {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
+      }
+      
+      .descriptionServices4 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        overflow-x: hidden;
       @media (max-width: 768px) {
         flex-direction: column-reverse;
       }
@@ -22,6 +22,7 @@ main {
         height: 100%;
         width: 40%;
         object-fit: cover;
+        
         @media (max-width: 768px) {
           width: 100%;
         }
@@ -54,4 +55,3 @@ main {
       }
   
     }
-}
