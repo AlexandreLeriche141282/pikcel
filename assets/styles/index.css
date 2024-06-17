@@ -68,6 +68,12 @@ header .presentation p {
   margin-bottom: 1vw;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+@media (max-width: 768px) {
+  header .presentation p {
+    margin-top: 100px;
+    font-size: 15px;
+  }
+}
 header .form {
   border-radius: 0% 100% 70% 30%/19% 50% 50% 81%;
   background-color: rgb(255, 255, 255);
@@ -114,21 +120,21 @@ header nav {
   background-color: rgb(255, 255, 255);
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  position: fixed;
   z-index: 2;
   left: 0;
   right: 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   header nav {
-    margin: 20px;
+    margin: 0 auto;
+    width: 100%;
   }
 }
 header nav img {
   width: 12vw;
   padding-left: 30px;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   header nav img {
     width: 150px;
   }
@@ -142,7 +148,7 @@ header .menu-burger {
   cursor: pointer;
 }
 header .menu-burger span {
-  height: 4px;
+  height: 1px;
   width: 25px;
   background-color: black;
   margin: 4px;
@@ -177,9 +183,10 @@ header .btn {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   header .btn {
     margin: 0 10px 0 0;
+    padding: 10px;
   }
 }
 header .btn:hover {
@@ -187,7 +194,7 @@ header .btn:hover {
   color: rgb(255, 198, 50);
   scale: 1.01;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   header .menu-burger {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -306,6 +313,7 @@ main .section1 {
   color: rgb(255, 198, 50);
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   main .section1 {
@@ -361,7 +369,6 @@ main .slider {
   width: 50%;
   height: 100%;
   position: relative;
-  overflow: hidden;
 }
 @media (max-width: 768px) {
   main .slider {
@@ -398,6 +405,7 @@ main .section2 {
   margin: 50px auto;
   background-color: rgb(255, 198, 50);
   color: rgb(56, 45, 94);
+  overflow: hidden;
 }
 main .descriptionServices2 {
   display: -webkit-box;
@@ -462,6 +470,7 @@ main .section3 {
   max-width: 1400px;
   margin: 50px auto;
   background-color: rgb(56, 45, 94);
+  overflow: hidden;
   color: rgb(255, 198, 50);
 }
 @media (max-width: 768px) {
@@ -532,6 +541,7 @@ main .section4 {
   max-width: 1400px;
   margin: 50px auto;
   background-color: rgb(255, 198, 50);
+  overflow: hidden;
   color: rgb(56, 45, 94);
 }
 main .descriptionServices4 {
