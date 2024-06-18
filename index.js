@@ -72,6 +72,43 @@ ScrollReveal().reveal('.section4', {
   delay: 200,
   reset: false
 });
+window.sr = ScrollReveal();
+
+sr.reveal('.process-card-1', {
+  origin: 'left',
+  distance: '100px',
+  duration: 1000,
+  delay: 200,
+  reset: false
+});
+
+sr.reveal('.process-card-2', {
+  origin: 'right',
+  distance: '100px',
+  duration: 1000,
+  delay: 400,
+  reset: false
+});
+
+sr.reveal('.process-card-3', {
+  origin: 'left',
+  distance: '100px',
+  duration: 1000,
+  delay: 600,
+  reset: false
+});
+
+sr.reveal('.process-card-4', {
+  origin: 'right',
+  distance: '100px',
+  duration: 1000,
+  delay: 800,
+  reset: false
+});
+
+// ------------------------------------------------------
+
+// ----------- Apparition et disparition nav --------- //
 
 const nav = document.querySelector("nav");
 let lastScroll = 0;
@@ -85,6 +122,9 @@ window.addEventListener("scroll", () => {
     lastScroll = window.scrollY;
 
 });
+// ---------------------------------------------------------
+
+// ----------- Menu Burger ---------------------- //
 
 document.querySelector('.menu-burger').addEventListener('click', () => {
   document.querySelector('nav ul').classList.toggle('active');
@@ -103,6 +143,8 @@ document.querySelector('.menu-background').addEventListener('click', () => {
   document.querySelector('.menu-burger').classList.remove('active');
   document.querySelector('.menu-background').classList.remove('active');
 });
+// ------------------------------------------------------------------
+
 
 
 
