@@ -88,7 +88,23 @@ window.addEventListener("scroll", () => {
 
 document.querySelector('.menu-burger').addEventListener('click', () => {
   document.querySelector('nav ul').classList.toggle('active');
+  document.querySelector('.menu-burger').classList.toggle('active');
+  document.querySelector('.menu-background').classList.toggle('active');
 });
+
+document.querySelector('.closeMenu').addEventListener('click', () => {
+  document.querySelector('nav ul').classList.remove('active');
+  document.querySelector('.menu-burger').classList.remove('active');
+  document.querySelector('.menu-background').classList.remove('active');
+});
+
+document.querySelector('.menu-background').addEventListener('click', () => {
+  document.querySelector('nav ul').classList.remove('active');
+  document.querySelector('.menu-burger').classList.remove('active');
+  document.querySelector('.menu-background').classList.remove('active');
+});
+
+
 
 
 

@@ -15,7 +15,7 @@ header {
       text-align: center;
       font-size: calc(2.8vw + 15px);
       font-weight: 500;
-      @media (max-width: 768px){
+      @media (max-width: 768px) {
         margin-top: 100px;
       }
     }
@@ -41,7 +41,7 @@ header {
       font-size: 1vw;
       margin-bottom: 1vw;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      @media (max-width: 768px){
+      @media (max-width: 768px) {
         margin-top: 100px;
         font-size: 15px;
       }
@@ -55,7 +55,7 @@ header {
     height: 100px;
     margin-bottom: 10px;
     margin-left: 50px;
-    
+
     @media (max-width: 768px) {
       display: none;
     }
@@ -68,7 +68,7 @@ header {
     height: 50px;
     float: right;
     margin-right: 50px;
-     @media (max-width: 768px) {
+    @media (max-width: 768px) {
       display: none;
     }
   }
@@ -91,10 +91,10 @@ header {
     left: 0;
     right: 0;
     @media (max-width: 900px) {
-      margin: 0 10px;  // Ajout de marge sur les côtés en responsive
-      width: calc(100% - 20px);  // Ajustement de la largeur pour tenir compte des marges
+      margin: 0 10px; // Ajout de marge sur les côtés en responsive
+      width: calc(100% - 20px); // Ajustement de la largeur pour tenir compte des marges
     }
-    
+
     img {
       width: 12vw;
       padding-left: 30px;
@@ -104,38 +104,56 @@ header {
       }
     }
   }
-  
 
-.menu-burger {
+  .menu-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .menu-burger {
     display: none;
     flex-direction: column;
     cursor: pointer;
     span {
-        height: 1px;
-        width: 25px;
-        background-color: black;
-        margin: 4px;
-        transition: 0.3s;
+      height: 1px;
+      width: 25px;
+      background-color: black;
+      margin: 4px;
+      transition: 0.3s;
     }
-}
+  }
 
-ul {
+  ul {
     display: flex;
     margin: 0 auto;
     padding: 0;
     list-style: none;
-}
+    .closeMenu{
+      display: none;
+    }
+  }
 
-li {
+  li {
     margin: 0 20px;
     cursor: pointer;
-}
+  }
 
-li:hover {
+  li:hover {
     color: rgb(255, 198, 50);
-}
+  }
 
-.btn {
+  .btn {
     margin: 0 auto;
     cursor: pointer;
     border: 2px solid rgb(255, 198, 50);
@@ -145,45 +163,95 @@ li:hover {
     color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
-    @media (max-width: 900px){
+    @media (max-width: 900px) {
       margin: 0 10px 0 0;
       padding: 10px;
-      
     }
-}
+  }
 
-.btn:hover {
+  .btn:hover {
     background-color: white;
     color: rgb(255, 198, 50);
     scale: 1.01;
-}
+  }
 
-
-
-@media (max-width: 900px) {
+  @media (max-width: 900px) {
     .menu-burger {
-        display: flex;
+      display: flex;
     }
 
     ul {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: white;
-        flex-direction: column;
-        width: 100%;
-        display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      transform: translateX(-100%);
+      background-color: rgb(56, 45, 94);
+      flex-direction: column;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 25px;
+      transition: transform 0.5s ease-in-out; /* Ajout de la transition */
     }
-
+    
     ul.active {
-        display: flex;
+      height: 100vh;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transform: translateX(0);
+      transition: transform 0.5s ease-in-out; /* Ajout de la transition */
+      .closeMenu {
+        display: block;
+        width: 40px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
     }
 
+    ul.active li {
+      animation: fadeIn 0.5s ease-in-out forwards;
+      animation-delay: calc(0.2s * var(--animation-order));
+    }
+    
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
     li {
-        margin: 10px 0;
+      margin: 10px 0;
+      padding: 30px;
+      color: rgb(255, 198, 50);
+      --animation-order: 0; /* Initialisation de l'ordre d'animation */
+      opacity: 0; /* Masquer les éléments li initialement */
     }
-}
-
+    
+    /* Ajoutez cette règle pour définir l'ordre d'animation des éléments li */
+    li:nth-child(1) {
+      --animation-order: 1;
+    }
+    li:nth-child(2) {
+      --animation-order: 2;
+    }
+    li:nth-child(3) {
+      --animation-order: 3;
+    }
+    li:nth-child(4) {
+      --animation-order: 4;
+    }
+    li:nth-child(5) {
+      --animation-order: 5;
+    }
+  }
 
   .banner {
     display: flex;
@@ -253,4 +321,3 @@ li:hover {
     color: #666;
   }
 }
-
