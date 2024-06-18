@@ -1,10 +1,13 @@
 
 
 .pricing-section {
+  background-image: url(../img/2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 40px 0;
-  text-align: center;
 color: rgb(56,45,94);
- max-width: 1200px;
+ 
  margin: 20px auto;
 
   h2 {
@@ -12,13 +15,13 @@ color: rgb(56,45,94);
     font-size: calc(1vw + 25px);
     margin-bottom: 40px;
     padding: 0 20px;
+    text-align: center;
   }
 
   .pricing-cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    
     
     .pricing-card {
       background-color: rgb(255, 198, 50);
@@ -27,37 +30,24 @@ color: rgb(56,45,94);
       min-width: 300px;
       margin: 20px;
       transition: transform 0.3s ease;
-    border: 1px solid rgb(48, 48, 31);
+      border: 1px solid rgb(22, 12, 2);
       &:hover {
         transform: translateY(-10px);
       }
 
-      &.featured {
-        
-
-        .card-header {
-          
-        }
-
-        .btn {
-          
-        }
-      }
-
       .card-header {
-       
-        
         padding: 20px;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
 
         h3 {
-          font-size: 24px;
+          font-size: calc(0.8vw + 30px);
           margin-bottom: 10px;
+          color: white;
         }
 
         .price {
-          font-size: 18px;
+          font-size: calc(0.5vw + 25px);
           font-weight: bold;
         }
       }
@@ -69,28 +59,15 @@ color: rgb(56,45,94);
           list-style: none;
           padding: 0;
           margin: 0;
+          i{
+            padding-right: 10px;
+          }
 
           li {
             margin-bottom: 10px;
-            font-size: 16px;
+            font-size: calc(0.1vw + 20px);
+
            
-          }
-        }
-      }
-
-      .card-footer {
-        padding: 20px;
-
-        .btn {
-          display: inline-block;
-          
-          text-decoration: none;
-          padding: 10px 20px;
-          border-radius: 4px;
-          transition: background-color 0.3s ease;
-
-          &:hover {
-            
           }
         }
       }

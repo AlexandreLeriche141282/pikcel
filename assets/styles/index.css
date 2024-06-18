@@ -789,10 +789,12 @@ header .description {
 }
 
 .pricing-section {
+  background-image: url(../img/2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 40px 0;
-  text-align: center;
   color: rgb(56, 45, 94);
-  max-width: 1200px;
   margin: 20px auto;
 }
 .pricing-section h2 {
@@ -800,6 +802,7 @@ header .description {
   font-size: calc(1vw + 25px);
   margin-bottom: 40px;
   padding: 0 20px;
+  text-align: center;
 }
 .pricing-section .pricing-cards {
   display: -webkit-box;
@@ -822,7 +825,7 @@ header .description {
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  border: 1px solid rgb(48, 48, 31);
+  border: 1px solid rgb(22, 12, 2);
 }
 .pricing-section .pricing-cards .pricing-card:hover {
   -webkit-transform: translateY(-10px);
@@ -834,11 +837,12 @@ header .description {
   border-top-right-radius: 8px;
 }
 .pricing-section .pricing-cards .pricing-card .card-header h3 {
-  font-size: 24px;
+  font-size: calc(0.8vw + 30px);
   margin-bottom: 10px;
+  color: white;
 }
 .pricing-section .pricing-cards .pricing-card .card-header .price {
-  font-size: 18px;
+  font-size: calc(0.5vw + 25px);
   font-weight: bold;
 }
 .pricing-section .pricing-cards .pricing-card .card-body {
@@ -849,18 +853,10 @@ header .description {
   padding: 0;
   margin: 0;
 }
+.pricing-section .pricing-cards .pricing-card .card-body ul i {
+  padding-right: 10px;
+}
 .pricing-section .pricing-cards .pricing-card .card-body ul li {
   margin-bottom: 10px;
-  font-size: 16px;
-}
-.pricing-section .pricing-cards .pricing-card .card-footer {
-  padding: 20px;
-}
-.pricing-section .pricing-cards .pricing-card .card-footer .btn {
-  display: inline-block;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
+  font-size: calc(0.1vw + 20px);
 }/*# sourceMappingURL=index.css.map */
