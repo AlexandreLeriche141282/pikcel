@@ -1,7 +1,7 @@
 header {
   min-height: 100vh;
   width: 100%;
-  background-image: url('../img/bureau.jpg');
+  background-image: url('../img/bureau.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -15,6 +15,7 @@ header {
       text-align: center;
       font-size: calc(2.8vw + 15px);
       font-weight: 500;
+      margin-top: 100px;
       @media (max-width: 768px) {
         margin-top: 80px;
         padding:0 10px;
@@ -39,12 +40,13 @@ header {
     p {
       text-align: center;
       color: rgb(86, 63, 5);
-      font-size: 1vw;
+      font-size:calc(0.7vw + 12px);
       margin-bottom: 1vw;
+      margin-top: 250px;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      @media (max-width: 768px) {
+      @media (max-width: 1068px) {
         margin-top: 100px;
-        font-size: 15px;
+        padding: 0 10px;
       }
     }
   }
@@ -164,6 +166,7 @@ header {
     color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
+    font-size:calc(0.5vw + 10px);
     @media (max-width: 900px) {
       margin: 0 10px 0 0;
       padding: 10px;
@@ -231,7 +234,8 @@ header {
     li {
       margin: 10px 0;
       padding: 30px;
-      color: rgb(255, 198, 50);
+      color: white;
+      letter-spacing: 5px;
       --animation-order: 0; /* Initialisation de l'ordre d'animation */
       opacity: 0; /* Masquer les éléments li initialement */
     }
