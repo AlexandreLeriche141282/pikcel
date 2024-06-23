@@ -274,7 +274,7 @@ header .btn:hover {
     right: 20px;
     top: 20px;
   }
-  header ul.active li {
+  header ul.active a {
     -webkit-animation: fadeIn 0.5s ease-in-out forwards;
             animation: fadeIn 0.5s ease-in-out forwards;
     -webkit-animation-delay: calc(0.2s * var(--animation-order));
@@ -304,27 +304,29 @@ header .btn:hover {
               transform: translateY(0);
     }
   }
-  header li {
+  header a {
+    color: white;
+    opacity: 0;
+    --animation-order: 0; /* Initialisation de l'ordre d'animation */
+  }
+  header a li {
+    letter-spacing: 5px;
     margin: 10px 0;
     padding: 30px;
-    color: white;
-    letter-spacing: 5px;
-    --animation-order: 0; /* Initialisation de l'ordre d'animation */
-    opacity: 0; /* Masquer les éléments li initialement */
   }
-  header li:nth-child(1) {
+  header a:nth-child(1) {
     --animation-order: 1;
   }
-  header li:nth-child(2) {
+  header a:nth-child(2) {
     --animation-order: 2;
   }
-  header li:nth-child(3) {
+  header a:nth-child(3) {
     --animation-order: 3;
   }
-  header li:nth-child(4) {
+  header a:nth-child(4) {
     --animation-order: 4;
   }
-  header li:nth-child(5) {
+  header a:nth-child(5) {
     --animation-order: 5;
   }
 }
@@ -376,12 +378,16 @@ header .card {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
   max-width: 300px;
-  cursor: pointer;
   -webkit-transition: border 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
   transition: border 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
   transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
   transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
   position: relative;
+}
+header .card button {
+  border: none;
+  font-family: manrope, serif;
+  cursor: pointer;
 }
 header .card .plus {
   position: absolute;
