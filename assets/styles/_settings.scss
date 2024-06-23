@@ -4,7 +4,8 @@
   }
 
 $font1:manrope, serif;
-
+$Color1:rgb(255, 198, 50);
+$Color2:rgb(56, 45, 94);
 
 * {
     margin: 0;
@@ -19,14 +20,14 @@ $font1:manrope, serif;
   }
   body{
     background-color: rgb(253,250,246);
-    color: rgb(56,45,94);
+    color: $Color2;
     
     li{
       list-style: none;  
     }
     a{
         text-decoration: none;
-        color: rgb(56,45,94);
+        color: $Color2;
     }
     main{
       overflow-x: hidden;

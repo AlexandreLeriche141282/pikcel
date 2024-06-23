@@ -18,14 +18,14 @@
             <span></span>
         </div>
         <ul>
-            <li>Accueil</li>
+            <span><li>Accueil</li></span>
             <li>Services</li>
             <li>Nos réalisations</li>
-            <li>Tarifs</li>
+            <a href="#pricing-section"><li>Tarifs</li></a>
             <li>Nous contacter</li>
             <img src="./assets/img/logo/close.png" alt="fermer le menu" class="closeMenu">
         </ul>
-        <button class="btn">Un projet en tête ?</button>
+        <a href="#contact"><button class="btn">Un projet en tête ?</button></a>
         </nav>
       <div class="menu-background"></div>
     
@@ -131,14 +131,14 @@
           <div class="descriptionServices4Text">
             <h2>Innovation</h2>
             <h3>Adaptation à l'évolution du marché</h3>
-            <p>Le web est un univers en perpétuel mouvement, où les standards évoluent sans cesse. Pour continuer à <span>capter l'attention</span> de vos cibles et rester compétitif, il est essentiel que votre site web soit régulièrement remis <span>au goût du jour</span>. Une refonte design régulière vous permettra de vous inscrire dans l'air du temps, d'intégrer les dernières innovations technologiques et d'offrir à vos visiteurs une <span>expérience</span>  toujours plus moderne et engageante.</p>
+            <p>Le web est un univers en perpétuel mouvement, où les standards évoluent sans cesse. Pour continuer à <span>capter l'attention</span> de vos cibles et rester compétitif, il est essentiel que votre site web soit régulièrement remis <span>au goût du jour</span>. Une refonte du design régulière vous permettra de vous inscrire dans l'air du temps, d'intégrer les dernières innovations technologiques et d'offrir à vos visiteurs une <span>expérience</span>  toujours plus moderne et engageante.</p>
           </div>
           <div>
           </div>
         </div>
       </section>
       <section class="process-section">
-        <h2>Découvrez nos <span>4 étapes</span> de création de site web</h2>
+        <h2>Découvrez nos <span>4 étapes</span> de création de sites web</h2>
         <div class="process-cards">
           <div class="process-card process-card-1">
             <div class="card-icon">
@@ -170,7 +170,7 @@
           </div>
         </div>
       </section>
-      <section class="pricing-section">
+      <section class="pricing-section" id="pricing-section">
         <h2>Nos offres de conception de sites web</h2>
         <div class="pricing-cards">
           <div class="pricing-card">
@@ -230,7 +230,7 @@
                 <li><i class="fas fa-check"></i>Hébergement</li>
                 <li><i class="fas fa-check"></i>1 Nom de domaine</li>
                 <li><i class="fas fa-check"></i>5 Heures de maintenance /mois</li>
-                <li><i class="fas fa-check"></i>3 Emails professionel</li>
+                <li><i class="fas fa-check"></i>3 Emails professionels</li>
                 <li><i class="fas fa-check"></i>Certificat SSL</li>
                 <li>80€ / mois</li>
                 
@@ -240,7 +240,46 @@
           </div>
         </div>
       </section>
+        <section class="contact" id="contact">
+          
+          <div class="contactText">
+            <h2>Commençons l'aventure. <br>
+                <span>Dîtes-nous bonjour !</span>
+            </h2>
+            <div>
+                <span><p>Vous avez un projet ?</p></span>
+            </div>
+            <p>N’hésitez pas à nous raconter ça, nous y répondrons avec enthousiasme !</p>
+        </div>
+        
+          <div class="contact-form">
+
+            <form id="validation" method="post" action="https://formspree.io/f/xkndyaqg">
+              <label for="name"></label>
+              <input type="text" id="name" name="firstname" placeholder="nom *" required>
+    
+              <label for="sujet"></label>
+              <input type="text" id="sujet" name="sujet" placeholder="sujet *" required>
+    
+              <label for="emailAddress"></label>
+              <input id="email" type="email" name="email" placeholder="email *" required>
+    
+              <label for="tel"></label>
+              <input type="tel" id="telephone" name="telephone" placeholder="téléphone">
+    
+    
+              <label for="message"></label>
+              <textarea id="message" name="message" placeholder="message *" required></textarea>
+    
+              <input type="submit" id="inputButton" value="Envoyer">
+    
+            </form>
+          </div>
+        </section>
     </main>
+    <footer>
+
+    </footer>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./index.js"></script>
 </body>

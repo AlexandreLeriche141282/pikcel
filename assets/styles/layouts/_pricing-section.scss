@@ -11,7 +11,7 @@ color: rgb(56,45,94);
  margin: 20px auto;
 
   h2 {
-    color: rgb(56,45,94) ;
+    color: $Color2 ;
     font-size: calc(1vw + 25px);
     margin-bottom: 40px;
     padding: 0 20px;
@@ -24,7 +24,7 @@ color: rgb(56,45,94);
     flex-wrap: wrap;
     
     .pricing-card {
-      background-color: rgb(255, 198, 50);
+      background-color: $Color1;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       min-width: 300px;

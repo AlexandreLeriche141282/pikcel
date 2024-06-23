@@ -4,9 +4,9 @@
       text-align: right;
       max-width: 1400px;
       margin: 50px auto;
-      background-color: rgb(56, 45, 94);
+      background-color: $Color2;
       overflow-x: hidden;
-      color: rgb(255, 198, 50);
+      color: $Color1;
       @media (max-width: 768px) {
         text-align: center; // Centre le texte sur les petits écrans
         }

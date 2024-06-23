@@ -1,11 +1,11 @@
 .process-section {
     padding: 40px 0;
     text-align: center;
-    background-color:rgb(56, 45, 94);
+    background-color:$Color2;
     
     h2 {
       font-size: calc(1vw + 25px);
-      color:rgb(255, 198, 50) ;
+      color:$Color1 ;
   
       span {
         color: white;

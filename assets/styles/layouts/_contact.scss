@@ -1,0 +1,104 @@
+.contact{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $Color1;
+  padding: 20px;
+  .contactText{
+    text-align:center;
+    // padding: 50px 10px;
+    h2{
+      color: $Color2;
+      font-size: calc(2vw + 25px);
+      span{
+        color: white;
+        font-style: italic;
+      }
+    }
+    p{
+      color:black;
+      font-size: calc(0.4vw + 12px);
+      
+    }
+    div span p{
+        font-weight: 900;
+        padding-top: 20px;
+        font-size: calc(0.5vw + 15px);
+      }
+  }
+}
+
+.contact-form {
+  display: flex;
+  align-items: center;
+  // background-color: rgba(128, 104, 104, 0.059);
+  justify-content: center;
+  border-radius: 10px;
+  width: 600px;
+  max-width: 100%; /* Nouvelle ligne ajoutée */
+  height: auto; /* Ajuste automatiquement la hauteur en fonction du contenu */
+  max-height: 500px; /* Limite la hauteur maximale pour éviter un agrandissement excessif */
+  transition: all 0.3s ease-in-out; /* Transition fluide pour les changements de taille */
+}
+
+@media screen and (max-width: 850px) {
+  .contact-form {
+      width: 320px;
+      max-width: 100%; /* Assure la largeur maximale sur les écrans plus petits */
+  }
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%; /* Utilise toute la largeur disponible */
+  padding: 20px; /* Ajoute un peu d'espacement intérieur */
+}
+
+  
+  .contact-form form input {
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid $Color2;
+   
+  }
+  .contact-form form input:focus {
+    outline-color: $Color1;
+    
+  }
+  .contact-form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid $Color2;
+    width: 100%;
+  }
+  .contact-form textarea:focus {
+    outline-color: $Color1;
+    
+  }
+  
+  
+  
+  #inputButton {
+    color: black; 
+    outline: none;
+    background: white; 
+    border: none;
+    border: 1px solid transparent; 
+    padding: 8px 20px; 
+    text-transform: uppercase; 
+    font: bold 16px 'Bitter', sans-serif;
+    cursor: pointer; 
+    transition: background-color 0.6s, border-color 0.6s, color 0.6s; 
+}
+
+#inputButton:hover {
+    background-color: $Color2; 
+    border-color: $Color2; 
+    color: white; 
+}

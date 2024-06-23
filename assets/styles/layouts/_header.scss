@@ -153,14 +153,17 @@ header {
   }
 
   li:hover {
-    color: rgb(255, 198, 50);
+    color: $Color1;
+  }
+  span li{
+    color: $Color1;
   }
 
   .btn {
-    margin: 0 auto;
+    margin-right: 20px;
     cursor: pointer;
-    border: 2px solid rgb(255, 198, 50);
-    background-color: rgb(255, 198, 50);
+    border: 2px solid $Color1;
+    background-color: $Color1;
     border-radius: 50px;
     padding: 20px;
     color: white;
@@ -175,7 +178,7 @@ header {
 
   .btn:hover {
     background-color: white;
-    color: rgb(255, 198, 50);
+    color: $Color1;
     scale: 1.01;
   }
 
@@ -189,7 +192,7 @@ header {
       top: 100%;
       right: 0;
       transform: translateX(-100%);
-      background-color: rgb(56, 45, 94);
+      background-color: $Color2;
       flex-direction: column;
       width: 100%;
       height: 0;
