@@ -1110,6 +1110,7 @@ footer .containerFooter .contactTel .contactRdv .contact-item a span {
 footer .infoFooter {
   background-color: rgb(56, 45, 94);
   margin: 20px auto 0;
+  font-size: calc(0.5vw + 13px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1121,9 +1122,9 @@ footer .infoFooter {
       -ms-flex-align: center;
           align-items: center;
   color: white;
-  padding: 0 50px;
+  padding: 0 30px;
   text-align: right;
 }
 footer .infoFooter img {
-  width: 150px;
+  width: 170px;
 }/*# sourceMappingURL=index.css.map */

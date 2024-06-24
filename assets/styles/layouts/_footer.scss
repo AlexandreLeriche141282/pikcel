@@ -83,15 +83,16 @@ footer{
   .infoFooter{
     background-color:$Color2;
     margin: 20px auto 0;
+    font-size: calc(0.5vw + 13px);
     display: flex;
     justify-content: space-between;
     width: 100%;
     align-items: center;
     color: white;
-    padding:0 50px;
+    padding:0 30px;
     text-align: right;
     img{
-        width: 150px;
+    width: 170px;
         
     }
   }  
