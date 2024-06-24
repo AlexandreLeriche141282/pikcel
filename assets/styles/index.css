@@ -1044,6 +1044,7 @@ footer .containerFooter .contactTel {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 20px 20px;
   }
 }
 footer .containerFooter .contactTel span {
@@ -1120,9 +1121,9 @@ footer .infoFooter {
       -ms-flex-align: center;
           align-items: center;
   color: white;
-  padding: 0 50px 20px 50px;
+  padding: 0 50px;
+  text-align: right;
 }
 footer .infoFooter img {
-  background-color: white;
-  width: 200px;
+  width: 150px;
 }/*# sourceMappingURL=index.css.map */
