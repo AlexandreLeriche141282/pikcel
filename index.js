@@ -135,19 +135,19 @@ const toggleMenu = (action) => {
 document.querySelector('.menu-burger').addEventListener('click', () => toggleMenu('toggle'));
 document.querySelector('.closeMenu').addEventListener('click', () => toggleMenu('remove'));
 document.querySelector('.menu-background').addEventListener('click', () => toggleMenu('remove'));
-document.querySelector('.link').addEventListener('click', () => toggleMenu('remove'));
+document.querySelectorAll('.link1, .link2, .link3, .link4, .link5').forEach(link => {
+    link.addEventListener('click', () => toggleMenu('remove'));
+});
 
 // ------------------------------------------------------------------
 
-
+// ------ Accés form with button ------------- //
 document.querySelector('.btn').addEventListener('click', function() {
   document.getElementById('contact').scrollIntoView({
   });
 });
-document.querySelector('.card').addEventListener('click', function() {
-  document.getElementById('section1').scrollIntoView({
-  });
-});
+
+//  ---------- Accés section --------- //
 function scrollToSection(sectionId) {
   const section = document.querySelector(sectionId);
   if (section) {

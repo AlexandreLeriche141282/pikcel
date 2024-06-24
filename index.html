@@ -18,11 +18,11 @@
             <span></span>
         </div>
         <ul>
-            <a href="#header"><span><li>Accueil</li></span></a>
-            <a href="#service"><li>Services</li></a>
-            <a href="#"><li>Nos réalisations</li></a>
-            <a href="#pricing-section" class="link"><li>Tarifs</li></a>
-            <a href="#contact"><li>Nous contacter</li></a>
+            <a href="#header" class="link1"><span><li>Accueil</li></span></a>
+            <a href="#service" class="link2"><li>Services</li></a>
+            <a href="#" class="link3"><li>Nos réalisations</li></a>
+            <a href="#pricing-section" class="link4"><li>Tarifs</li></a>
+            <a href="#contact" class="link5"><li>Nous contacter</li></a>
             <img src="./assets/img/logo/close.png" alt="fermer le menu" class="closeMenu">
         </ul>
         <button class="btn">Un projet en tête ?</button>
@@ -56,7 +56,7 @@
             <div class="card">
               <button onclick="scrollToSection('#section1')">
                 <img src="./assets/img/logo/computer-svgrepo-com.svg" alt="Logo d'un ordinateur" class="logo">
-                <h3 class="title">Un site web à votre image</h3><br>
+                <h3 class="title">Un site web à votre image</h3>
                 <p class="description">Un design sur mesure qui reflète parfaitement votre entreprise et vous démarque sur le web.</p>
                 <img src="./assets/img/logo/plus2.svg" alt="icône pour accéder aux détails" class="plus">
               </button>
@@ -66,7 +66,7 @@
               <button onclick="scrollToSection('#section2')">
                 <img src="./assets/img/logo/loupe.svg" alt="Logo 2" class="logo d'une loupe">
                 <h3 class="title">Visez la première page sur Google</h3>
-                <p class="description">Dominez Google ! Attirez plus de visiteurs qualifiés et augmentez votre visibilité en ligne !</p>
+                <p class="description">Dominez Google ! Attirez plus de visiteurs qualifiés et augmentez votre visibilité en ligne! </p>
                 <img src="./assets/img/logo/plus2.svg" alt="icône pour accéder aux détails" class="plus">
               </button>
             </div>
@@ -244,11 +244,12 @@
           </div>
         </div>
       </section>
-        <section class="contact" id="contact">
-          
-          <div class="contactText">
-            <h2>Commençons l'aventure. <br>
-                <span>Dîtes-nous bonjour !</span>
+      <section class="contact" id="contact">
+        
+        <div class="contactText">
+          <h2>Commençons l'aventure. <br>
+            <span>Dîtes-nous bonjour !</span>
+            <img src="./assets/img/arrow.png" alt="">
             </h2>
             <div>
                 <span><p>Vous avez un projet ?</p></span>
@@ -282,7 +283,43 @@
         </section>
     </main>
     <footer>
+      <div class="containerFooter">
 
+        <div class="contactTel">
+          <span><p>Vous avez un
+            produit en tête ?<br> Posez vos questions ou obtenez <br>un devis sans frais</p></span>
+          <p>N’hésitez pas à nous contacter directement par email, par téléphone ou bien à réserver un appel de découverte gratuit avec Alexandre, notre expert en création de site internet.</p>
+          <div class="contactRdv">
+            <div class="contact-item">
+              <a href="mailto:alexandre@pickcel.com">
+                <i class="fas fa-envelope"></i>
+                <span>alexandre@pixcel.com</span>
+              </a>
+            </div>
+            <div class="contact-item">
+              <a href="tel:+1234567890">
+                <i class="fas fa-phone"></i>
+                <span>06 10 60 14 42</span>
+              </a>
+            </div>
+            <div class="contact-item">
+              <a href="https://calendly.com/" target="_blank">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Réservez un appel</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="infoFooter">
+  
+        <a href="#top" id="scroll-btn">
+          <i class="fa-arrow-up"></i>
+        </a>
+        <p>© 2024 Pikcel. Tous droits réservés. <br>
+          Mentions légales</p>  
+          
+      </div>
     </footer>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./index.js"></script>

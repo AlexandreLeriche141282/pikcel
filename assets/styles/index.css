@@ -40,13 +40,13 @@ header .presentation {
 }
 header .presentation h1 {
   text-align: center;
-  font-size: calc(2.8vw + 15px);
+  font-size: calc(2.8vw + 16px);
   font-weight: 500;
   margin-top: 100px;
 }
 @media (max-width: 768px) {
   header .presentation h1 {
-    margin-top: 80px;
+    margin-top: 40px;
     padding: 0 10px;
   }
 }
@@ -377,7 +377,7 @@ header .card {
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
-  max-width: 300px;
+  max-width: 390px;
   -webkit-transition: border 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
   transition: border 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
   transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
@@ -388,6 +388,11 @@ header .card button {
   border: none;
   font-family: manrope, serif;
   cursor: pointer;
+}
+@media (max-width: 600px) {
+  header .card {
+    max-width: 250px;
+  }
 }
 header .card .plus {
   position: absolute;
@@ -415,11 +420,11 @@ header .logo {
   margin-bottom: 10px;
 }
 header .title {
-  font-size: 22px;
+  font-size: calc(0.3vw + 15px);
   margin-bottom: 10px;
 }
 header .description {
-  font-size: 18px;
+  font-size: calc(0.2vw + 12px);
   color: #666;
 }
 
@@ -899,6 +904,9 @@ header .description {
   color: white;
   font-style: italic;
 }
+.contact .contactText h2 img {
+  width: calc(3vw + 20px);
+}
 .contact .contactText p {
   color: black;
   font-size: calc(0.4vw + 12px);
@@ -993,6 +1001,128 @@ header .description {
 }
 
 footer {
-  height: 200px;
+  background-color: rgb(255, 198, 50);
+  color: rgb(56, 45, 94);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer .containerFooter {
+  font-size: calc(0.4vw + 15px);
+  padding: 0 30px;
+  max-width: 1400px;
+  margin: 10px auto;
+}
+footer .containerFooter .contactTel {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../img/2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 30px 30px;
+}
+@media (max-width: 1000px) {
+  footer .containerFooter .contactTel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+footer .containerFooter .contactTel span {
+  font-weight: 600;
+  font-size: calc(0.6vw + 17px);
+}
+footer .containerFooter .contactTel .contactRdv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+footer .containerFooter .contactTel .contactRdv .contact-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 10px;
+}
+footer .containerFooter .contactTel .contactRdv .contact-item i {
+  padding-right: 10px;
+}
+footer .containerFooter .contactTel .contactRdv .contact-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  color: rgb(56, 45, 94);
+}
+footer .containerFooter .contactTel .contactRdv .contact-item a:hover {
+  color: rgb(255, 198, 50);
+}
+footer .containerFooter .contactTel .contactRdv .contact-item a img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+footer .containerFooter .contactTel .contactRdv .contact-item a span {
+  font-size: 1em;
+}
+@media (max-width: 1000px) {
+  footer .containerFooter .contactTel p {
+    margin-top: 30px;
+  }
+}
+footer .infoFooter {
   background-color: rgb(56, 45, 94);
+  margin: 20px auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  padding: 0 50px 20px 50px;
+}
+footer .infoFooter img {
+  background-color: white;
+  width: 200px;
 }/*# sourceMappingURL=index.css.map */

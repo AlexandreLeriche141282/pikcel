@@ -16,6 +16,9 @@
         color: white;
         font-style: italic;
       }
+      img{
+        width:calc(3vw + 20px);
+      }
     }
     p{
       color:black;
@@ -41,6 +44,7 @@
   height: auto; /* Ajuste automatiquement la hauteur en fonction du contenu */
   max-height: 500px; /* Limite la hauteur maximale pour éviter un agrandissement excessif */
   transition: all 0.3s ease-in-out; /* Transition fluide pour les changements de taille */
+  
 }
 
 @media screen and (max-width: 850px) {

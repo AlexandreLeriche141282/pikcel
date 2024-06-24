@@ -1,4 +1,97 @@
 footer{
-    height: 200px;
-    background-color: $Color2;
+    background-color: $Color1;
+    color: $Color2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .containerFooter {
+        font-size: calc(0.4vw + 15px);  
+        padding: 0 30px;
+        max-width: 1400px;
+        margin: 10px auto;
+        
+        
+        .contactTel{
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            align-items: center;
+            background-image: url(../img/2.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            padding: 30px 30px;
+            @media (max-width:1000px){
+                display: flex;
+                flex-direction: column;
+                
+            }
+
+            span{
+                font-weight: 600;
+                font-size: calc(0.6vw + 17px); 
+                
+            }
+            .contactRdv {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                padding: 20px;
+              
+                .contact-item {
+                  display: flex;
+                  align-items: center;
+                  text-align: center;
+                  margin: 10px;
+                  i{
+                    padding-right: 10px;
+                  }
+              
+                  a {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                    color: $Color2;
+                    &:hover {
+                      color: $Color1; // Assurez-vous de définir $Color1 dans vos variables SCSS
+                    }
+              
+                    img {
+                      width: 30px;
+                      height: 30px;
+                      margin-right: 10px;
+                    }
+              
+                    span {
+                      font-size: 1em;
+                    }
+                  }
+                }
+              }
+              p{
+                @media (max-width:1000px){
+                    margin-top: 30px;
+                    
+                }
+              }
+        }
+    }
+  .infoFooter{
+    background-color:$Color2;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    color: white;
+    padding: 0 50px 20px 50px;
+    img{
+        background-color: white;
+        width: 200px;
+        
+    }
+  }  
 }
