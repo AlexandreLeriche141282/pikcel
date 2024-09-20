@@ -1,9 +1,9 @@
 @font-face {
-    font-family: "manrope";
-    src: url(../fonts/Manrope-VariableFont_wght.ttf);
+    font-family: "montserrat";
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
   }
 
-$font1:manrope, serif;
+$font1:montserrat, serif;
 $Color1:rgb(255, 198, 50);
 $Color2:rgb(56, 45, 94);
 
@@ -11,7 +11,7 @@ $Color2:rgb(56, 45, 94);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  
+    font-family: montserrat;
   }
   @mixin childCenter {
     display: flex;

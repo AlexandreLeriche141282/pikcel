@@ -1,0 +1,301 @@
+body.headerOnepage{
+height: 600px;
+    nav {
+            border-bottom: 2px solid rgba(229, 218, 218, 0.519);
+            width: 100%;
+        background-color:#FDFAF6;
+        font-weight: 400;
+        transition: 0.3s;
+        position: fixed;
+        z-index: 2;
+        left: 0;
+        right: 0;
+        top: 0;
+        .navContainer{
+            display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0.5vw 0;
+        max-width: 1600px;
+        }
+        
+    
+        img {
+          width: 12vw;
+          padding-left: 30px;
+          @media (max-width: 900px) {
+              width: 150px;
+              padding-left: 10px; // Ajustement de la marge à gauche de l'image en responsive
+          }
+        }
+      }
+}
+
+
+    .descriptionOnepage{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 9vh;
+        margin-bottom: 20px;
+        @media (max-width: 900px) {
+            grid-template-columns: 100%;
+          }
+        .packPicture {
+            img {
+              height: 900px;
+              border-bottom-left-radius: 760px;
+              object-fit: cover;
+              width: 100%;
+            }
+            @media (max-width: 900px) {
+              img {
+                display: none;
+              }
+            }
+          }
+          
+        
+    }
+    .titleDescritption{
+        text-align: center;
+        margin: 0 30px;
+        p{
+            margin: 30px 0;
+            font-size:25px;
+        }
+        span{
+                font-weight: 800;
+            }
+        h1{
+            font-size: calc(1.3vw + 35px);
+            font-weight: 500;
+            margin: 40px 0;
+            @media (max-width: 600px) {
+                margin:0; // Très petites marges pour les écrans mobiles (jusqu'à 600px)
+              } 
+        }
+        h2{
+            margin: 10px 0;
+            font-size: calc(1vw + 20px);
+        }
+        svg{
+            width: 50px;
+            margin-top: 50px;
+        }
+        h3{
+            font-size: calc(2.5vw + 55px);
+            font-weight: 400;
+            color: $Color1; 
+        }
+        .btn {
+            cursor: pointer;
+            text-transform: uppercase;
+            border: 2px solid $Color2;
+            background-color: $Color2;
+            border-radius: 10px;
+            padding: 10px 30px;
+            color: $Color1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+            font-size:20px;
+            @media (max-width: 900px) {
+              margin: 0 10px 0 0;
+              padding: 10px;
+            }
+          }
+        
+          .btn:hover {
+            background-color: white;
+            color: $Color2;
+            scale: 1.01;
+          }
+    }
+
+    section.onePage{
+        text-align: center;
+        background-color: rgba(234, 242, 242, 0.381);
+        padding-bottom: 50px;
+        h1{
+            padding: 80px 10px;
+            font-size: calc(0.1vw + 35px);
+            font-weight: 300;
+            span{
+                font-weight: 600;
+            }
+        }
+        .onepageContainer{
+            margin: 0 auto;
+            max-width: 1300px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            text-align: left;
+            @media (max-width: 700px) {
+                grid-template-columns: 1fr;
+              }
+            .onepageText{
+                padding: 0 20px;
+                h2{
+                    padding-bottom: 20px;
+                    font-size: calc(0.3vw + 35px);
+                    letter-spacing:3px;
+                }
+                p{
+                    line-height: 35px;
+                    font-weight: 300;
+                    font-size: calc(0.4vw + 15px);
+                    @media (max-width: 700px) {
+                      line-height: 20px;
+                    }
+                }
+                span p{
+                    font-weight: 700;
+                    @media (max-width: 700px) {
+                      line-height: 25px;
+                    }
+                }
+
+            }
+            .onepageScreen {
+                position: relative;
+                width: 100%; /* Ajustez selon vos besoins */
+                max-width: 600px; /* Taille maximale de l'image */
+                height: 650px; /* Hauteur fixe du conteneur, ajustez selon vos besoins */
+                overflow: hidden; /* Masque la partie de l'image qui dépasse le conteneur */
+                padding: 0 10px;
+                
+                img {
+                  position: absolute;
+                  padding: 0 20px;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: auto; /* Maintient les proportions de l'image */
+                  min-height: 100%; /* Assure que l'image couvre la hauteur du conteneur */
+                  object-fit: cover; /* Remplit le conteneur sans déformation */
+                  transition: transform 2.9s ease; /* Animation fluide du déplacement de l'image */
+                  transform: translateY(0); /* Position initiale de l'image */
+                }
+              
+                &:hover img {
+                  transform: translateY(-50%); /* Ajuste la valeur pour révéler complètement l'image */
+                }
+                @media (max-width: 700px) {
+                    display: none;
+                  }
+              }
+              
+        }
+        .onepagePresentation{
+          margin: 0 auto;
+          padding: 100px 0;
+            max-width: 1300px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            text-align: left;
+            @media (max-width: 950px) {
+               
+                grid-template-columns: 1fr; /* Change la grille en une seule colonne */
+              }
+            
+              .onepagePresentationPicture {
+                @media (max-width: 950px) {
+               
+                  
+                  order: -1; /* Place l'image au-dessus du texte */
+                }
+              }
+            
+              .onepagePresentationPicture img {
+                padding: 0; /* Supprime le padding pour que l'image prenne toute la largeur sans marges */
+              }
+              .onepagePresentationPicture{
+                padding: 0 30px;
+                img {
+                  width: 100%; /* L'image prend toute la largeur de son container */
+                  height: auto; /* Maintient le ratio d'aspect de l'image */
+                  object-fit: cover;
+                  border-radius: 10px;
+            }
+          }
+          .onepageTextPresentation{
+            max-width: 600px;
+            padding: 0 30px;
+                h2{
+                    padding-bottom: 20px;
+                    font-size: calc(0.3vw + 28px);
+                    letter-spacing:3px;
+                    @media (max-width: 950px) {
+                      padding-top:20px ;
+                    }
+                  }
+                p{
+                    line-height: 35px;
+                    font-weight: 300;
+                    font-size: calc(0.4vw + 15px);
+                    @media (max-width: 700px) {
+                      line-height: 20px;
+                    }
+                }
+                span p{
+                  font-weight: 700;
+                    padding-top: 20px;
+                  }
+                }
+              }
+              .onepagePresentation2{
+                margin: 0 auto;
+          padding: 50px 0;
+            max-width: 1300px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            text-align: left;
+            @media (max-width: 950px) {
+               padding: 10px 0;
+                grid-template-columns: 1fr; /* Change la grille en une seule colonne */
+              }
+                .onepagePresentationSpeed {
+                  order: -1; /* Place l'image au-dessus du texte */
+                }
+                
+                .onepagePresentationSpeed img {
+                  padding: 0; /* Supprime le padding pour que l'image prenne toute la largeur sans marges */
+                }
+                .onepagePresentationSpeed{
+                  padding: 0 20px;
+                  
+                  img {
+                    width: 100%; /* L'image prend toute la largeur de son container */
+                    height: auto; /* Maintient le ratio d'aspect de l'image */
+                    object-fit: cover;
+                    border-radius: 10px;
+                  }
+                }
+                .onepageTextSpeed{
+          max-width: 600px;
+          padding: 0 30px 0;
+          h2{
+            padding-bottom: 20px;
+            font-size: calc(0.3vw + 28px);
+            letter-spacing:3px;
+            @media (max-width: 950px) {
+              padding-top:20px ;
+            }
+          }
+          p{
+                  line-height: 35px;
+                  font-weight: 300;
+                  font-size: calc(0.4vw + 15px);
+                  @media (max-width: 700px) {
+                    line-height: 20px;
+                  }
+                }
+                span p{
+                font-weight: 700;
+                  padding-top: 20px;
+              }
+            }
+          }
+          }
+      
+          

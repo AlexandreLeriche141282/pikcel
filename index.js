@@ -115,7 +115,7 @@ let lastScroll = 0;
 
 window.addEventListener("scroll", () => {
     if (window.scrollY < lastScroll) {
-        nav.style.top ="20px";
+        nav.style.top ="0px";
     } else {
         nav.style.top = "-140px"
     }

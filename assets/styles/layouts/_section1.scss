@@ -6,6 +6,7 @@
     margin: 50px auto;
     background-color: $Color2;
     color: $Color1;
+    font-family: montserrat;
     flex-wrap: wrap; // Permet aux éléments de s'enrouler sur plusieurs lignes
     overflow-x: hidden;
     @media (max-width: 768px) {

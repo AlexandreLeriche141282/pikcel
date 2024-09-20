@@ -6,28 +6,40 @@
   background-position: center;
   background-repeat: no-repeat;
   padding: 40px 0;
-color: rgb(56,45,94);
  
  margin: 20px auto;
 
-  h2 {
+  h1 {
     color: $Color2 ;
     font-size: calc(1vw + 25px);
     margin-bottom: 40px;
     padding: 0 20px;
     text-align: center;
+    font-weight: 200;
+    span{
+      font-weight: 600;
+    }
+  }
+  h2{
+    color: #FFA500 ;
+    font-size: calc(0.5vw + 15px);
+    margin-bottom: 40px;
+    padding: 0 20px;
+    text-align: center;
+    font-weight: 600;
   }
 
   .pricing-cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    text-align: center;
     
     .pricing-card {
       background-color: $Color1;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      min-width: 300px;
+      width: 500px;
       margin: 20px;
       transition: transform 0.3s ease;
       border: 1px solid rgb(22, 12, 2);
@@ -41,14 +53,14 @@ color: rgb(56,45,94);
         border-top-right-radius: 8px;
 
         h3 {
-          font-size: calc(0.8vw + 30px);
+          font-size: calc(0.2vw + 25px);
           margin-bottom: 10px;
           color: white;
+          font-weight: 600;
+          letter-spacing: 2px;
         }
-
         .price {
-          font-size: calc(0.5vw + 25px);
-          font-weight: bold;
+          font-size: calc(0.2vw + 15px);
         }
       }
 
@@ -66,10 +78,51 @@ color: rgb(56,45,94);
           li {
             margin-bottom: 10px;
             font-size: calc(0.1vw + 20px);
-
+            border-bottom: 1px solid #cda20675;  /* Ajoute une bordure fine sous chaque élément de la liste */
+    padding: 10px 0; 
+    &:last-child{
+      border-bottom: none;
+    }   
+              span{
+                font-size: calc(1.3vw + 30px);
+                font-weight: 600;
+              }
            
           }
         }
+        .price::after {
+          content: "*Prix HT/par mois";  /* Le texte que vous voulez ajouter après */
+          display: block;       /* Forcer le texte à apparaître en dessous */
+          font-size: 0.2em;     /* Ajuster la taille du texte si besoin */
+          color: #555;          /* Optionnel : changer la couleur */
+          text-align: center;   /* Centrer le texte si nécessaire */
+      }
+      .btn {
+        cursor: pointer;
+        border: 2px solid $Color2;
+        background-color: $Color2;
+        border-radius: 10px;
+        padding: 10px;
+        color: $Color1;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+        font-size:calc(0.5vw + 10px);
+        @media (max-width: 900px) {
+          margin: 0 10px 0 0;
+          padding: 10px;
+        }
+      }
+    
+      .btn:hover {
+        background-color: white;
+        color: $Color2;
+        scale: 1.01;
+      }
+      p{
+        font-size: 0.9em;
+        margin-top: 5px;
+          color: #555; 
+      }
       }
     }
   }
