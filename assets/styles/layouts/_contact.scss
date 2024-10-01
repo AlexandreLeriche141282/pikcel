@@ -4,17 +4,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $Color1;
+  background-color: #F6F7F4;
   padding: 20px;
   .contactText{
     text-align:center;
-    // padding: 50px 10px;
     h2{
       color: $Color2;
       font-size: calc(2vw + 25px);
-      span{
+      span {
         color: white;
         font-style: italic;
+        text-shadow: 
+          -1px -1px 0 black,  
+           1px -1px 0 black,
+          -1px  1px 0 black,
+           1px  1px 0 black;
       }
       img{
         width:calc(3vw + 20px);

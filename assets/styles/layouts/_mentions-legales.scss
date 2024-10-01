@@ -1,0 +1,67 @@
+// Variables de couleurs pour une meilleure gestion
+$primary-color: #333; // Couleur principale pour le texte
+$secondary-color: #666; // Couleur secondaire pour les détails
+$link-color: #007bff; // Couleur des liens
+$link-hover-color: darken($link-color, 10%); // Couleur des liens au survol
+
+// Style global pour la section des mentions légales
+.mentions-legales {
+    margin-top: 100px;
+  padding: 2rem; // Espacement autour du contenu
+  background-color: #f9f9f9; // Fond léger pour faire ressortir la section
+  font-family: 'Arial', sans-serif; // Police de caractères
+  
+  h2 {
+    color: $primary-color;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    color: $primary-color;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    
+    strong {
+      color: $secondary-color;
+      font-weight: bold;
+    }
+    
+    // Styles pour les adresses e-mail et numéros de téléphone
+    a {
+      color: $link-color;
+      text-decoration: none;
+      border-bottom: 1px dashed $link-color;
+      transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+      
+      &:hover {
+        color: $link-hover-color;
+        border-bottom-color: $link-hover-color;
+      }
+    }
+  }
+
+  // Style pour les listes
+  ul {
+    padding-left: 1.5rem;
+    
+    li {
+      color: $primary-color;
+      margin-bottom: 0.8rem;
+      
+      &:before {
+        content: "•";
+        color: $link-color;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  // Espacement entre les sections
+  & > p, & > ul {
+    margin-bottom: 1.5rem;
+  }
+}
+
+

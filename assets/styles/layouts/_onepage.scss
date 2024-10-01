@@ -25,7 +25,7 @@ height: 600px;
           width: 12vw;
           padding-left: 30px;
           @media (max-width: 900px) {
-              width: 150px;
+            width: 180px;
               padding-left: 10px; // Ajustement de la marge à gauche de l'image en responsive
           }
         }
@@ -59,17 +59,20 @@ height: 600px;
     }
     .titleDescritption{
         text-align: center;
-        margin: 0 30px;
+        margin: 50px 50px 0;
+        @media (max-width: 600px) {
+          margin: 30px 30px 0;
+        } 
         p{
-            margin: 30px 0;
-            font-size:25px;
+            margin: 10px 0 50px;
+            font-size:18px;
         }
         span{
                 font-weight: 800;
             }
         h1{
-            font-size: calc(1.3vw + 35px);
-            font-weight: 500;
+            font-size: clamp(3rem, 1vw + 1rem, 1rem);
+            font-weight: 700;
             margin: 40px 0;
             @media (max-width: 600px) {
                 margin:0; // Très petites marges pour les écrans mobiles (jusqu'à 600px)
@@ -80,8 +83,8 @@ height: 600px;
             font-size: calc(1vw + 20px);
         }
         svg{
-            width: 50px;
-            margin-top: 50px;
+            width: 70px;
+            margin-top: 20px;
         }
         h3{
             font-size: calc(2.5vw + 55px);
@@ -98,10 +101,11 @@ height: 600px;
             color: $Color1;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease-in-out;
-            font-size:20px;
+            font-size:30px;
             @media (max-width: 900px) {
               margin: 0 10px 0 0;
               padding: 10px;
+              font-size: 20px;
             }
           }
         
@@ -116,6 +120,29 @@ height: 600px;
         text-align: center;
         background-color: rgba(234, 242, 242, 0.381);
         padding-bottom: 50px;
+        h2{
+          padding-bottom: 20px;
+          font-size: calc(0.3vw + 35px);
+          letter-spacing:3px;
+          span{
+            font-weight: 400;
+          }
+      }
+      p{
+          line-height: 35px;
+          font-weight: 300;
+          font-size: calc(0.2vw + 15px);
+          @media (max-width: 700px) {
+            line-height: 20px;
+          }
+      }
+      span p{
+          font-weight: 700;
+          padding-top: 5px;
+          @media (max-width: 700px) {
+            line-height: 25px;
+          }
+      }
         h1{
             padding: 80px 10px;
             font-size: calc(0.1vw + 35px);
@@ -126,7 +153,7 @@ height: 600px;
         }
         .onepageContainer{
             margin: 0 auto;
-            max-width: 1300px;
+            max-width: 1450px;
             display: grid;
             grid-template-columns: 50% 50%;
             text-align: left;
@@ -135,32 +162,13 @@ height: 600px;
               }
             .onepageText{
                 padding: 0 20px;
-                h2{
-                    padding-bottom: 20px;
-                    font-size: calc(0.3vw + 35px);
-                    letter-spacing:3px;
-                }
-                p{
-                    line-height: 35px;
-                    font-weight: 300;
-                    font-size: calc(0.4vw + 15px);
-                    @media (max-width: 700px) {
-                      line-height: 20px;
-                    }
-                }
-                span p{
-                    font-weight: 700;
-                    @media (max-width: 700px) {
-                      line-height: 25px;
-                    }
-                }
 
             }
             .onepageScreen {
                 position: relative;
                 width: 100%; /* Ajustez selon vos besoins */
                 max-width: 600px; /* Taille maximale de l'image */
-                height: 650px; /* Hauteur fixe du conteneur, ajustez selon vos besoins */
+                height: 720px; /* Hauteur fixe du conteneur, ajustez selon vos besoins */
                 overflow: hidden; /* Masque la partie de l'image qui dépasse le conteneur */
                 padding: 0 10px;
                 
@@ -189,7 +197,7 @@ height: 600px;
         .onepagePresentation{
           margin: 0 auto;
           padding: 100px 0;
-            max-width: 1300px;
+            max-width: 1450px;
             display: grid;
             grid-template-columns: 50% 50%;
             text-align: left;
@@ -219,34 +227,14 @@ height: 600px;
             }
           }
           .onepageTextPresentation{
-            max-width: 600px;
+            max-width: 900px;
             padding: 0 30px;
-                h2{
-                    padding-bottom: 20px;
-                    font-size: calc(0.3vw + 28px);
-                    letter-spacing:3px;
-                    @media (max-width: 950px) {
-                      padding-top:20px ;
-                    }
-                  }
-                p{
-                    line-height: 35px;
-                    font-weight: 300;
-                    font-size: calc(0.4vw + 15px);
-                    @media (max-width: 700px) {
-                      line-height: 20px;
-                    }
-                }
-                span p{
-                  font-weight: 700;
-                    padding-top: 20px;
-                  }
                 }
               }
               .onepagePresentation2{
                 margin: 0 auto;
           padding: 50px 0;
-            max-width: 1300px;
+          max-width: 1450px;
             display: grid;
             grid-template-columns: 50% 50%;
             text-align: left;
@@ -272,30 +260,180 @@ height: 600px;
                   }
                 }
                 .onepageTextSpeed{
-          max-width: 600px;
           padding: 0 30px 0;
-          h2{
-            padding-bottom: 20px;
-            font-size: calc(0.3vw + 28px);
-            letter-spacing:3px;
-            @media (max-width: 950px) {
-              padding-top:20px ;
+          span p{
+            margin-bottom:50px;
+          }
+          .btn-multipages {
+            cursor: pointer;
+            border: 2px solid $Color2;
+            background-color: $Color2;
+            border-radius: 10px;
+            padding: 10px 30px;
+            color: $Color1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+            font-size:30px;
+            @media (max-width: 900px) {
+              margin: 0 10px 0 0;
+              padding: 10px;
+              font-size: 20px;
             }
           }
-          p{
-                  line-height: 35px;
-                  font-weight: 300;
-                  font-size: calc(0.4vw + 15px);
-                  @media (max-width: 700px) {
-                    line-height: 20px;
+        
+          .btn-multipages:hover {
+            background-color: white;
+            color: $Color2;
+            scale: 1.01;
+          }
+            }
+          }
+          }
+          
+          // Section step ------------------------------------- //
+          section.step {
+            text-align: center;
+            margin: 50px auto;
+            h2{
+              font-size: calc(0.3vw + 24px);
+              position: relative;
+  display: inline;
+  background-image: linear-gradient(to top, $Color1 40%, transparent 40%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  padding: 0 5px;
+            }
+            h3{
+              font-weight: 300;
+              font-size: calc(0.1vw + 15px);
+              padding: 0 10px;
+            }
+            .etapes-fabrication {
+              position: relative;
+              max-width: 800px;
+              margin: 50px auto;
+              padding: 10px;
+            }
+          
+            .etape {
+              position: relative;
+              margin-bottom: 50px;
+          
+              &::after {
+                content: '';
+                position: absolute;
+                left: 20px;
+                top: 40px;
+                height: calc(100% + 30px);
+                width: 4px;
+                background: #FFA500;
+              }
+          
+              &:last-child::after {
+                display: none;
+              }
+          
+              &-numero {
+                position: absolute;
+                left: 0;
+                top: 15px;
+                width: 40px;
+                height: 40px;
+                background: #FFA500;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-weight: bold;
+                z-index: 1;
+              }
+          
+              &-contenu {
+                margin-left: 60px;
+                background: #f9f9f9;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          
+                h3 {
+                  margin-top: 0;
+                  color: $Color2;
+                  letter-spacing: 5px;
+                  font-weight: 800;
+                  span{
+                    font-weight: 300;
                   }
                 }
-                span p{
-                font-weight: 700;
-                  padding-top: 20px;
+                p{
+                  padding-top: 10px;
+                  font-size: 20px;
+                }
               }
             }
           }
+
+    // Section faq --------------------------- //
+    .faq {
+      padding: 40px 20px;
+      background-color: rgba(234, 242, 242, 0.381);
+      .faq-container{
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem);
+      }
+    
+      &-item {
+        margin-bottom: 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+      }
+    
+      &-question {
+        width: 100%;
+        text-align: left;
+        padding: 15px 20px;
+        background-color: #f5f5f5;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        font-size: clamp(1rem, 1.5vw + 1rem, 1rem);
+        &:hover {
+          background-color: #e0e0e0;
+        }
+    
+        &::after {
+          content: '\25BC';
+          float: right;
+          transform: rotate(0deg);
+          transition: transform 0.3s ease;
+        }
+    
+        &.active::after {
+          transform: rotate(180deg);
+        }
+      }
+    
+      &-answer {
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+          p{
+            font-size: clamp(1rem, 1.5vw + 1rem, 1rem);
           }
+        &.active {
+          padding: 20px;
+          max-height: 1000px;
+        }
+      }
+    }
       
           

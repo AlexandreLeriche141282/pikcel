@@ -5,10 +5,10 @@ footer{
     align-items: center;
     flex-direction: column;
     .containerFooter {
-        font-size: calc(0.4vw + 15px);  
+        font-size: calc(0.1vw + 15px);  
         padding: 0 30px;
         max-width: 1500px;
-        margin: 10px auto;
+        margin: 25px auto 10px;
         
         
         .contactTel{
@@ -72,7 +72,7 @@ footer{
                 }
               }
               p{
-                
+                text-align: center;
                 @media (max-width:1000px){
                     margin-top: 30px;
                     
@@ -91,6 +91,9 @@ footer{
     color: white;
     padding:0 30px;
     text-align: right;
+    a{
+      color: white;
+    }
     img{
     width: 170px;
         

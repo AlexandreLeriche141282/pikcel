@@ -129,23 +129,25 @@ window.addEventListener("scroll", () => {
 const toggleMenu = (action) => {
   document.querySelector('nav ul').classList[action]('active');
   document.querySelector('.menu-burger').classList[action]('active');
-  document.querySelector('.menu-background').classList[action]('active');
+  // document.querySelector('.menu-background').classList[action]('active');
 };
 
 document.querySelector('.menu-burger').addEventListener('click', () => toggleMenu('toggle'));
 document.querySelector('.closeMenu').addEventListener('click', () => toggleMenu('remove'));
-document.querySelector('.menu-background').addEventListener('click', () => toggleMenu('remove'));
-document.querySelectorAll('.link1, .link2, .link3, .link4, .link5').forEach(link => {
+// document.querySelector('.menu-background').addEventListener('click', () => toggleMenu('remove'));
+document.querySelectorAll('.link1, .link2, .link3, .link4, .link5, .link6').forEach(link => {
     link.addEventListener('click', () => toggleMenu('remove'));
 });
 
 // ------------------------------------------------------------------
 
 // ------ Accés form with button ------------- //
-document.querySelector('.btn').addEventListener('click', function() {
-  document.getElementById('contact').scrollIntoView({
-  });
+document.querySelector('.btn').addEventListener('click', function(e) {
+  console.log("Button clicked!"); // Vérifiez si ce message apparaît dans la console
+  e.preventDefault();
+  window.location.href = 'index.html#contact';
 });
+
 
 //  ---------- Accés section --------- //
 function scrollToSection(sectionId) {
@@ -154,6 +156,30 @@ function scrollToSection(sectionId) {
     section.scrollIntoView({ behavior: 'smooth' });
   }
 }
+
+// --------- Section faq onePage.html ----- //
+document.addEventListener('DOMContentLoaded', function() {
+  const faqQuestions = document.querySelectorAll('.faq-question');
+
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', function() {
+      const answer = this.nextElementSibling;
+      const isActive = this.classList.contains('active');
+
+      // Ferme toutes les réponses ouvertes
+      faqQuestions.forEach(q => {
+        q.classList.remove('active');
+        q.nextElementSibling.classList.remove('active');
+      });
+
+      // Ouvre la réponse cliquée si elle n'était pas déjà ouverte
+      if (!isActive) {
+        this.classList.add('active');
+        answer.classList.add('active');
+      }
+    });
+  });
+});
 
 
 
