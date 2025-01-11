@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.pikcel.fr/index.html</loc>
     <lastmod>2025-01-01</lastmod>
@@ -7,19 +8,19 @@
     <priority>1</priority>
   </url>
   <url>
-    <loc>https://www.pikcel.fr/nos-realisations.html</loc>
+    <loc>https://www.pikcel.fr/nos-realisations-sites-web.html</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.pikcel.fr/onePage.html</loc>
+    <loc>https://www.pikcel.fr/site-vitrine-one-page.html</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.pikcel.fr/multiPages.html</loc>
+    <loc>https://www.pikcel.fr/site-vitrine-plusieurs-pages.html</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -29,5 +30,16 @@
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.pikcel.fr/index.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+    <image:image>
+      <image:loc>https://www.pikcel.fr/assets/img/logo/logo.jpg</image:loc>
+      <image:caption>Logo de l'agence Pikcel</image:caption>
+      <image:title>Logo officiel de l'agence web Pikcel à Valenciennes et Denain</image:title>
+    </image:image>
   </url>
 </urlset>
