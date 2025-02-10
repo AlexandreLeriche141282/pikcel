@@ -1,0 +1,148 @@
+// Variables
+$colors: (
+  primary: #2563eb,
+  secondary: #1e40af,
+  text: #1f2937,
+  light-bg: #f3f4f6,
+  border: #e5e7eb,
+  gray: #6b7280
+);
+
+$spacing: (
+  base: 1.5rem,
+  double: 3rem,
+  half: 0.75rem
+);
+
+$breakpoints: (
+  mobile: 768px
+);
+
+// Mixins
+@mixin mobile {
+  @media (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
+// Styles spécifiques pour main
+main {
+//   padding: map-get($spacing, base);
+//   max-width: 1200px;
+
+article {
+  max-width: 1200px;
+  margin: 6rem auto 0;
+
+  h1 {
+      font-size: 2.5rem;
+      color: $Color1;
+      margin-bottom: map-get($spacing, double);
+      line-height: 1.2;
+      border-bottom: 1px solid $Color1;
+      padding-bottom: map-get($spacing, base);
+      font-weight: 400;
+
+      @include mobile {
+          font-size: 2rem;
+          margin-bottom: map-get($spacing, base);
+          padding: 10px;
+      }
+  }
+
+  section {
+      margin-bottom: map-get($spacing, double);
+      padding: map-get($spacing, base);
+      background-color: map-get($colors, light-bg);
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+          transform: translateY(-2px);
+      }
+
+      @include mobile {
+          padding: map-get($spacing, half);
+          margin-bottom: map-get($spacing, base);
+      }
+
+      h2 {
+          font-size: 2rem;
+          color: map-get($colors, primary);
+          margin-bottom: map-get($spacing, base);
+
+          @include mobile {
+              font-size: 1.5rem;
+          }
+      }
+
+      h3 {
+          font-size: 1.5rem;
+          color: $Color2;
+          margin: map-get($spacing, base) 0 map-get($spacing, half);
+
+          @include mobile {
+              font-size: 1.25rem;
+          }
+      }
+
+      p {
+          margin-bottom: map-get($spacing, base);
+          line-height: 1.6;
+          color: map-get($colors, text);
+
+          a {
+              font-weight: 600;
+          }
+      }
+
+      ul {
+          margin-bottom: map-get($spacing, base);
+          padding-left: map-get($spacing, base);
+
+          li {
+              margin-bottom: 0.5rem;
+              position: relative;
+              line-height: 1.6;
+
+              &::before {
+                  content: "•";
+                  color: map-get($colors, primary);
+                  position: absolute;
+                  left: -1rem;
+              }
+          }
+      }
+  }
+
+  /* Add this CSS rule */
+  .invisible {
+      opacity: 0;
+  }
+
+  .in-view {
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+      /* You can add more complex animations here */
+  }
+}
+}
+
+/* Styles d'impression */
+@media print {
+main {
+  padding: 2cm;
+  max-width: none;
+
+  article {
+      section {
+          page-break-inside: avoid;
+          background-color: transparent;
+
+          &:hover {
+              transform: none;
+          }
+      }
+  }
+}
+}

@@ -51,12 +51,6 @@ header .presentation h2 {
   font-size: calc(2.8vw + 35px);
   font-weight: 100;
 }
-@media (max-width: 768px) {
-  header .presentation h2 {
-    margin-top: 40px;
-    padding: 0 10px;
-  }
-}
 header .presentation h2 span {
   font-weight: 300;
 }
@@ -67,15 +61,32 @@ header .presentation .word {
   opacity: 0;
   -webkit-transform: translateY(40px);
           transform: translateY(40px);
-  -webkit-transition: opacity 1.8s ease-out, -webkit-transform 1.8s ease-out;
-  transition: opacity 1.8s ease-out, -webkit-transform 1.8s ease-out;
-  transition: opacity 1.8s ease-out, transform 1.8s ease-out;
-  transition: opacity 1.8s ease-out, transform 1.8s ease-out, -webkit-transform 1.8s ease-out;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transition: opacity 1s ease-out, -webkit-transform 1s ease-out, -webkit-filter 1s ease-out;
+  transition: opacity 1s ease-out, -webkit-transform 1s ease-out, -webkit-filter 1s ease-out;
+  transition: opacity 1s ease-out, transform 1s ease-out, filter 1s ease-out;
+  transition: opacity 1s ease-out, transform 1s ease-out, filter 1s ease-out, -webkit-transform 1s ease-out, -webkit-filter 1s ease-out;
+  position: relative;
+  display: inline-block;
 }
 header .presentation .word.visible {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  -webkit-filter: blur(0);
+          filter: blur(0);
+}
+@media (max-width: 768px) {
+  header .presentation h2 {
+    font-size: calc(4vw + 20px);
+    margin-top: 40px;
+    padding: 0 10px;
+  }
+  header .presentation .word {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
 }
 header .presentation h3 {
   color: #FFA500;
@@ -1813,4 +1824,114 @@ section.step .etape-contenu p {
 .card-description {
   font-size: 16px;
   color: #666;
+}
+
+main article {
+  max-width: 1200px;
+  margin: 6rem auto 0;
+  /* Add this CSS rule */
+}
+main article h1 {
+  font-size: 2.5rem;
+  color: rgb(255, 198, 50);
+  margin-bottom: 3rem;
+  line-height: 1.2;
+  border-bottom: 1px solid rgb(255, 198, 50);
+  padding-bottom: 1.5rem;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  main article h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 10px;
+  }
+}
+main article section {
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+main article section:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  main article section {
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+}
+main article section h2 {
+  font-size: 2rem;
+  color: #2563eb;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+  main article section h2 {
+    font-size: 1.5rem;
+  }
+}
+main article section h3 {
+  font-size: 1.5rem;
+  color: rgb(56, 45, 94);
+  margin: 1.5rem 0 0.75rem;
+}
+@media (max-width: 768px) {
+  main article section h3 {
+    font-size: 1.25rem;
+  }
+}
+main article section p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #1f2937;
+}
+main article section p a {
+  font-weight: 600;
+}
+main article section ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+main article section ul li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+main article section ul li::before {
+  content: "•";
+  color: #2563eb;
+  position: absolute;
+  left: -1rem;
+}
+main article .invisible {
+  opacity: 0;
+}
+main article .in-view {
+  opacity: 1;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  /* You can add more complex animations here */
+}
+
+/* Styles d'impression */
+@media print {
+  main {
+    padding: 2cm;
+    max-width: none;
+  }
+  main article section {
+    page-break-inside: avoid;
+    background-color: transparent;
+  }
+  main article section:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
 }/*# sourceMappingURL=index.css.map */

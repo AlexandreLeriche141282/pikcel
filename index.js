@@ -180,6 +180,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const words = document.querySelectorAll('.word');
+  words.forEach((word, index) => {
+    setTimeout(() => {
+      word.classList.add('visible');
+    }, index * 200);
+  });
+});
+
+
 
 
 
