@@ -12,7 +12,7 @@
 }
 
 body {
-  background-color: rgb(253, 250, 246);
+  background-color: white;
   color: rgb(56, 45, 94);
 }
 body li {
@@ -89,10 +89,12 @@ header .presentation .word.visible {
   }
 }
 header .presentation h3 {
-  color: #FFA500;
-  font-size: calc(0.7vw + 19px);
-  font-weight: 300;
+  color: #FFB300;
+  font-size: calc(0.8vw + 20px);
+  letter-spacing: 2px;
+  font-weight: 600;
   padding: 20px 0;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 @media (max-width: 1068px) {
   header .presentation h3 {
@@ -102,8 +104,10 @@ header .presentation h3 {
   }
 }
 header .presentation h3 span {
-  color: #FFA500;
+  color: #FFB300;
   font-weight: 600;
+  letter-spacing: 2px;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 header .presentation h4 {
   font-weight: 300;
@@ -245,7 +249,8 @@ header nav .navContainer .btn {
   background-color: rgb(255, 198, 50);
   border-radius: 10px;
   padding: 10px;
-  color: white;
+  color: #1A237E;
+  font-weight: 600;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.3s ease-in-out;
@@ -884,7 +889,7 @@ header .description {
 .pricing-section .pricing-cards .pricing-card .card-header h3 {
   font-size: calc(0.2vw + 25px);
   margin-bottom: 10px;
-  color: white;
+  color: #1A237E;
   font-weight: 600;
   letter-spacing: 2px;
 }
