@@ -255,7 +255,7 @@ header nav .navContainer .btn {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  font-size: calc(0.5vw + 10px);
+  font-size: calc(0.5vw + 8px);
 }
 @media (max-width: 900px) {
   header nav .navContainer .btn {
