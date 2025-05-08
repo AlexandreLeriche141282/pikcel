@@ -21,6 +21,9 @@ $Color2:rgb(56, 45, 94);
   body{
     background-color: white;
     color: $Color2;
+    h3{
+      font-style: italic;
+    }
     
     li{
       list-style: none;  
