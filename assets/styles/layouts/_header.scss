@@ -161,7 +161,7 @@ header {
       align-items: center;
       margin: 0 auto;
       padding: 0.5vw 0;
-      max-width: 1600px;
+      max-width: 1800px;
   
       img {
         width: 12vw;
@@ -234,7 +234,7 @@ header {
       }
     }
   
-    @media (max-width: 900px) {
+    @media (max-width: 1500px) {
       .navContainer {
         .menu-burger {
           display: flex;
@@ -283,7 +283,7 @@ header {
             transform: translateY(0);
           }
   
-          @for $i from 1 through 6 {
+          @for $i from 1 through 7 {
             li:nth-child(#{$i}) a {
               transition-delay: $i * 0.1s;
             }
