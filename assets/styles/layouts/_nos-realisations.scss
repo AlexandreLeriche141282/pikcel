@@ -64,6 +64,13 @@
     .view-site:hover .arrow {
         transform: translateX(5px);
     }
+    h6{
+        font-size: calc(16px + 0.1vw);
+        font-style: italic;
+    }
+    h5{
+        font-size: calc(23px + 0.1vw);
+    }
 }
 .card-title {
     font-size: 20px;
